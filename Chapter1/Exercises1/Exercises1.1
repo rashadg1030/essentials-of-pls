@@ -1,0 +1,82 @@
+Exercise 1.1 [*] Write inductive definitions of the following sets.  
+Write each definition in all three styles (top-down, bottom-up, and rules of inference).  
+Using your rules, show the derivation of some sample elements of each set.
+
+ex. {n * 2 | n ∈ N}
+    Let G = {n * 2 | n ∈ N}
+    Top-down:
+    A natural number n is in G if and only if
+    1. n = 0
+    or 
+    2. n - 2 ∈ G
+
+1. { 3n + 2 | n ∈ N }
+
+   Let P = { 3n + 2 | n ∈ N }
+
+   Top-down:
+   A natural number n is in P if and only if
+   1. n = 2
+   or
+   2. n - 3 ∈ P
+
+   Bottom-up:
+   Let P be the smallest set contained in N and satisfying the
+   following two properties
+   1. 2 ∈ P 
+   and
+   2. If n ∈ P, then ( n + 3 ) ∈ P  ( n ∈ P -> ( n + 3 ) ∈ P ) 
+
+   Rules-of-inference:
+   /2 ∈ P 
+
+   n ∈ P/( n + 3 ) ∈ P 
+
+2. { 2n + 3m + 1 | n, m ∈ N }
+    
+   Let T = { 2n + 3m + 1 | n, m ∈ N }
+
+   Top-down:
+   A natural number n is in T if and only if
+   1. n = 1
+   or
+   2. ( n - 2 ) ∈ T
+   or 
+   3. ( n - 3 ) ∈ T
+   
+   Bottom-up:
+   Let T be the smallest subset contained in N and satisfying the 
+   following two properties
+   1. 1 ∈ T
+   and
+   2. If n ∈ T, then ( n + 2 ) ∈ T or ( n + 3 ) ∈ T
+
+   Rules-of-inference:
+   /1 ∈ T
+
+   n ∈ T/( n + 2 ) ∈ T or ( n + 3 ) ∈ T
+
+3. { ( n, 2n + 1 ) | n ∈ N }
+   
+   Let Y = { ( n, 2n + 1 ) | n ∈ N }
+
+   Top-down: 
+   A pair of natural numbers (p, q) is in Y if and only if
+   1. p = 0 and q = 1
+   or
+   2. ( ( p - 1 ), ( q - 2 ) ) ∈ Y  
+
+   Let P = { (m, n) | m, n ∈ N }
+   Bottom-up:
+   Let Y be the smallest subset contained in P and satisfying the
+   following two properties
+   1. ( 0, 1 ) ∈ Y
+   and
+   2. If ( p, q ) ∈ Y, then ( p + 1, q + 2 ) ∈ Y   
+
+   Rules-of-inference
+   /( 0, 1 ) ∈ Y
+
+   ( p, q ) ∈ Y/( p + 1, q + 2 ) ∈ Y 
+
+4.  
